@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>第 36 頁</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 800px;
+      margin: auto;
+    }
+    .item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">點圖片播放聲音 - 第 36 頁</h1>
+
+<div class="grid">
+  <div class="item"><img src="png/01_36.png" onclick="playSound('wav/01_36.wav')"></div>
+  <div class="item"><img src="png/02_36.png" onclick="playSound('wav/02_36.wav')"></div>
+  <div class="item"><img src="png/03_36.png" onclick="playSound('wav/03_36.wav')"></div>
+  <div class="item"><img src="png/04_36.png" onclick="playSound('wav/04_36.wav')"></div>
+  <div class="item"><img src="png/05_36.png" onclick="playSound('wav/05_36.wav')"></div>
+  <div class="item"><img src="png/06_36.png" onclick="playSound('wav/06_36.wav')"></div>
+  <div class="item"><img src="png/07_36.png" onclick="playSound('wav/07_36.wav')"></div>
+  <div class="item"><img src="png/08_36.png" onclick="playSound('wav/08_36.wav')"></div>
+  <div class="item"><img src="png/09_36.png" onclick="playSound('wav/09_36.wav')"></div>
+</div>
+
+<audio id="audioPlayer"></audio>
+
+<script>
+  function playSound(file) {
+    const audio = document.getElementById('audioPlayer');
+    audio.src = file;
+    audio.play();
+  }
+</script>
+
+<p style="text-align:center;">
+  <a href="index.html">返回首頁</a>
+</p>
+
+</body>
+</html>
